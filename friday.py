@@ -3,6 +3,7 @@ from selenium import webdriver
 print('Input your Google email address')
 userEmail = input()
 userEmail = "sfyuba123@gmail.com"
+userEmail.send_keys(userEmail)
 # try this and see if works
 
 browser = webdriver.Firefox()

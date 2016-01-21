@@ -9,12 +9,11 @@ emailElem.send_keys('malvina415@gmail.com')
 loginElem = browser.find_element_by_id('next')
 loginElem.click()
 
-time.sleep(20)
+print('Input your password')
+userPassword = input()
 
 passwordElem = browser.find_element_by_id('Passwd')
-passwordElem.send_keys('Ethan1992!')
-
-passwordElem = browser.find_element_by_id('next')
+passwordElem.send_keys(userPassword)
 passwordElem.submit()
 
 composeElem = browser.find_element_by_class_name('z0')

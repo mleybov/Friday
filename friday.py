@@ -1,26 +1,20 @@
 from selenium import webdriver
 
-print('Input your Google email address')
-userEmail = input()
-
 browser = webdriver.Firefox()
 browser.get('http://mail.Google.com')
 
-loginElem = browser.find_element_by_id('Email')
+emailElem = browser.find_element_by_id('Email')
+emailElem.send_keys('malvina@gmail.com')
+
+loginElem = browser.find_element_by_id('next')
 loginElem.click()
 
-emailElem = browser.find_element_by_id('Email')
-emailElem.send_keys(userEmail)
-emailElem.submit()
-
-print('Input your Google password')
-userPassword = input()
-
 passwordElem = browser.find_element_by_id('Passwd')
-passwordElem.send_keys(userPassword)
+passwordElem.send_keys('Ethan1992!')
+
 passwordElem.submit()
 
-composeElem = browser.find_element_by_id(':hw')
+composeElem = browser.find_element_by_class_name('z0')
 composeElem.click()
 
 print('Input recipient')

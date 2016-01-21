@@ -3,7 +3,7 @@ from selenium import webdriver
 print('Input your Google email address')
 userEmail = input()
 userEmail = "sfyuba123@gmail.com"
-# try this
+# try this and see if works
 
 browser = webdriver.Firefox()
 browser.get('http://mail.Google.com')

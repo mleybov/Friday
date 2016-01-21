@@ -2,9 +2,6 @@ from selenium import webdriver
 
 print('Input your Google email address')
 userEmail = input()
-userEmail = "sfyuba123@gmail.com"
-userEmail.send_keys(userEmail)
-# try this and see if works
 
 browser = webdriver.Firefox()
 browser.get('http://mail.Google.com')
@@ -33,7 +30,11 @@ toElem = browser.find_element_by_id(':n4')
 toElem.send_keys(userRecipient)
 toElem.click()
 
+print('Input your subject')
+userSubject = input()
+
 subjectElem = browser.find_element_by_id(':mp')
+subjectElem.send_keys(userSubject)
 subjectElem.click()
 
 bodyElem = browser.find_element_by_id(':nr')

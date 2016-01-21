@@ -4,14 +4,17 @@ browser = webdriver.Firefox()
 browser.get('http://mail.Google.com')
 
 emailElem = browser.find_element_by_id('Email')
-emailElem.send_keys('malvina@gmail.com')
+emailElem.send_keys('malvina415@gmail.com')
 
 loginElem = browser.find_element_by_id('next')
 loginElem.click()
 
+time.sleep(20)
+
 passwordElem = browser.find_element_by_id('Passwd')
 passwordElem.send_keys('Ethan1992!')
 
+passwordElem = browser.find_element_by_id('next')
 passwordElem.submit()
 
 composeElem = browser.find_element_by_class_name('z0')

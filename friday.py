@@ -37,4 +37,3 @@ print('Input body of email here')
 
 bodyElem = browser.find_element_by_id(':nr')
 bodyElem.send_keys(userBody)
-bodyElem.click()
